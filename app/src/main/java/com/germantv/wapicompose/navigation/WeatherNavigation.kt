@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.germantv.wapicompose.screens.WeatherDummyScreen
+import com.germantv.wapicompose.screens.WeatherMainScreen
 import com.germantv.wapicompose.screens.WeatherSplashScreen
 
 
@@ -22,6 +23,9 @@ fun WeatherNavigation() {
 
         composable(WeatherScreens.DummyScreen.name) {
             WeatherDummyScreen(navController = navController)
+        }
+        composable(WeatherScreens.MainScreen.name) {
+            WeatherMainScreen(navController = navController)
         }
     }
     //1
