@@ -7,3 +7,4 @@ package com.germantv.wapicompose.utils
 // navigation/WeatherScreens.kt
 // Creating WeatherNavigation class
 // screens/WeatherSplashScreen first screen of the app
+// Updating main activity to add navigation support
