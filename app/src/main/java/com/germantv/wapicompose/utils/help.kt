@@ -23,3 +23,9 @@ package com.germantv.wapicompose.utils
 // Create wrapper class DataOrException to handle response from the API.
 // Create MainViewModel class to connect with Repository
 // Now pass MainViewModel dependency to the activity in WeatherNavigation
+//Room
+// UI => ViewModel => Repository => Dao => Database
+//add dependency = > data class for tables = > Dao intterface for methods => abstract class to create database
+//Update AppModule to add Dao and database provider
+//Create repository with Dao injection
+//to create ViewModel class with repository injection

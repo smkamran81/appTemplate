@@ -9,16 +9,19 @@ import com.germantv.wapicompose.network.WeatherApi
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(private val api: WeatherApi) {
-                                                            //WeatherObject
-    suspend fun getWeather(cityQuery:String):DataOrException<Weather,Boolean,Exception>{
+    //WeatherObject
+    suspend fun getWeather(
+        cityQuery: String,
+        units: String
+    ): DataOrException<Weather, Boolean, Exception> {
 
         val response = try {
-                 api.getWeather(cityQuery)
-        }catch(e:Exception){
-            Log.d("WeatherRepository","Exception: $e")
-             return DataOrException(e = e)
+            api.getWeather(cityQuery, units = units)
+        } catch (e: Exception) {
+            Log.d("WeatherRepository", "Exception: $e")
+            return DataOrException(e = e)
         }
-       Log.d("WeatherRepository","getWeather: $response")
+        Log.d("WeatherRepository", "getWeather: $response")
 
         return DataOrException(data = response)
 

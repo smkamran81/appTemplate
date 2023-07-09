@@ -21,9 +21,9 @@ class MainViewModel @Inject constructor(private val repository: WeatherRepositor
             = mutableStateOf(DataOrException(null,true,Exception("")))
      */
     //, units: String
-    suspend fun getWeatherData(city: String)
+    suspend fun getWeatherData(city: String,unit:String)
             : DataOrException<Weather, Boolean, Exception> {
-        return repository.getWeather(cityQuery = city)
+        return repository.getWeather(cityQuery = city,units = unit)
 
     }
 
